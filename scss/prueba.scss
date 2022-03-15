@@ -1,0 +1,558 @@
+
+@import "variables.scss";
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    height: auto;
+    background-color:rgb(51, 51, 61);
+}
+main{
+    height: auto;
+}
+.padreTitulo{
+        background-color: rgb(51, 51, 61);
+         display: grid;
+         grid-template-columns: 40% 40% 20%;
+         grid-template-rows: 100px 40px;
+         height: auto;
+         grid-template-areas: "a1 a2 a3"
+                              "a1 a5 a6";
+         align-items: center;              
+}
+.hijoUno{
+    background-color:rgb(51, 51, 61);
+    grid-area: a1;
+    justify-items: stretch;
+    align-self: start; 
+
+    
+    
+}
+.hijoDos{
+    color: rgb(244, 247, 250);
+    grid-area: a5;
+    font-size: calc( 15px + 1vw);
+    justify-self: center;
+    align-self: center;
+}
+
+h1{
+
+    color: rgb(215, 233, 250);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: calc( 50px + 1vw);
+    background-color: rgb(51, 51, 61);
+    padding: 2%;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px #fff ;
+ }
+ .flete{
+     grid-area: a3;
+     height: 40%;
+     width: 50%;
+ }
+.animate__animated{
+    animation-iteration-count:calc(3);
+}
+ .promo{
+     display: inline-block;
+     margin-left: 4em;
+     margin-bottom: 2em;
+ }
+ footer{
+    color: $colorLetra;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 2rem;
+    background-color: rgb(42, 42, 218);
+    padding: 0%;
+    margin: 0%;
+    border-top: 10px solid red;
+ }
+ #footer{
+     background-image: linear-gradient(to left ,  rgb(221, 133, 133) , rgb(25, 25, 27));
+ }
+ .bi-facebook{
+     font-size: 30px;
+     background-color: rgb(9, 9, 231);
+ }
+ .bi-facebook:hover{
+          font-size: 40px;
+          background-color:rgb(5, 5, 121); 
+ }
+ #mainProductos{
+     display: grid;
+     grid-template-columns: 40% 40%;
+     grid-template-rows: 400px 400px;
+     grid-template-areas: "p1 p2"
+                           "p3 p4";
+     column-gap: 2em;
+     row-gap: 2em; 
+     justify-content: center; 
+     height: auto;                    
+ }
+ .ratonaUno{
+     margin-top: 2em;
+     grid-area: p1;
+ }
+ .ratonaUno:hover{
+     transform: scale(1.1, 1.1);
+ }
+ .ratonaDos{
+     margin-top: 2em;
+     grid-area: p2;
+ }
+ .ratonaDos:hover{
+     transform: scale(1.1, 1.1);
+ }
+.lamparaUno{
+    grid-area: p3;
+}
+.lamparaUno:hover{
+    transform: scale(1.1,1);
+}
+.lamparaDos{
+    grid-area: p4;
+}
+.lamparaDos:hover{
+    transform: scale(1.1,1);
+}
+#menuNav{
+    background-color:rgb(51, 51, 61);
+    position: sticky;
+    top: 0pt;
+}
+
+   
+    .cUno{
+        color: $colorLetra;
+    }    
+    .cDos, .cTres, .cCuatro, .cCinco{
+                       @extend .cUno;}
+   
+    
+    #padre{ 
+        display: grid;
+        grid-template-columns: 5% 15% 15% 15% 15% 15% 5%;
+        grid-template-rows: 45px;
+        grid-template-areas: "n1 n2 n3 n4 n5 n6 n7";
+        background-color: rgb(51, 51, 61);
+        height: 3em;
+        column-gap: 1em;
+    }
+    #public{
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 450px;
+        grid-template-areas: "p1 p2 p3";
+        justify-content: center;
+        background-color: rgb(51, 51, 61);
+    }
+    #seccionTrabajo{
+           display: grid;
+           background-color: rgb(215, 233, 250);
+           grid-template-columns: 45% 45%;
+           grid-template-rows: 376px 376px;
+           grid-template-areas: "t1 t2"
+                                "t3 t4";
+           justify-content: center;
+           align-content: center;
+           column-gap: 2%;
+           row-gap: 10px;
+           height: 800px;
+    }
+    @mixin estiloTrabajo{
+         width: $fullWidth;
+         height: $fullHeight;
+         border-radius: $borderRadius;
+}
+    .trabajoUno{
+        @include estiloTrabajo;
+          grid-area: t1;
+    }
+    .trabajoUno:hover{
+             transform: scale(1.1,1.1);
+    }
+    .trabajoDos:hover{
+        transform: scale(1.1,1.1);
+    }
+    .trabajoTres:hover{
+        transform: scale(1.1,1.1);
+    }
+    .trabajoCuatro:hover{
+        transform: scale(1.1,1.1);
+    }
+    .trabajoDos{
+        @include estiloTrabajo;
+          grid-area: t2;
+    }
+    .trabajoTres{
+        @include estiloTrabajo;
+        grid-area: t3;
+    }
+    .trabajoCuatro{
+        @include estiloTrabajo;
+        grid-area: t4;
+    }
+   
+    .video{
+        grid-area: p2;
+        width: 100%;
+        height: 90%;
+        margin-top: 1em;
+       margin-bottom: 1em;
+    }
+    .armando{
+        color: rgb(215, 233, 250);
+        grid-area: p1;
+        font-size: 1em;
+        background-color:rgb(51, 51, 61);
+        justify-self: center;
+        align-self: center;
+        
+    }
+    .rotuloP{
+        color: rgb(215, 233, 250);
+    }
+    #hijoUno{
+        grid-area: n2;
+        display: inline-block;
+        margin-top: 1em;
+        justify-items: center;
+        align-items: center;
+       }
+#hijoDos{
+   grid-area: n3;
+   display: inline-block;
+   margin-top: 1em;
+   justify-items: center;
+   align-items: center;
+}
+#hijoTres{
+   grid-area: n4;
+   display: inline-block;
+   margin-top: 1em;
+   justify-items: center;
+   align-items: center;
+}
+#hijoCuatro{
+   grid-area: n5;
+   display: inline-block;
+   margin-top: 1em;
+   justify-items: center;
+   align-items: center;
+}
+#hijoCinco{ 
+   grid-area: n6;
+   display: inline-block;
+   margin-top: 1em;
+   justify-items: center;
+   align-items: center;
+}
+.button{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(220, 20, 60);
+    border-color: rgb(215, 233, 250);
+}
+.button:hover{
+   background-color:rgb(247, 1, 50); 
+   transform: scale(1 , 1.2);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 10% 50% 20% 10%;
+    grid-template-rows: 60px 300px 300px 60px 60px;
+    grid-template-areas: "m2 m2 m3 m3"
+                         "m5 m5 m6 m6"
+                         "m5 m5 m6 m6"
+                         "m10 m11 m12 13"
+                         "m14 m15 m16 m17";
+    background-color:   rgb(51, 51, 61);
+    height: auto;             
+}
+.d-block w-100{
+    height: 100%;
+    width: 100%;
+    }
+
+#queHacemos{
+    grid-area: m2;
+    justify-items: center;
+    color: white;
+    border-color: solid rgb(51, 51, 61) ;
+}
+.queHacemos{
+   width: 100%;
+   height: 100%;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 30px;
+   background-color:rgb(51, 51, 61);
+}
+.queHacemos:hover{
+    transform: scale(1,1.1);
+    background-color: gray;
+}
+.queHacemosHijo{
+    color:rgb(215, 233, 250)
+}
+#dondeEstamos{
+    grid-area: m3;
+    color: rgb(215, 233, 250);
+    align-items: center;
+    justify-items: stretch;
+     }
+.donde{
+   color: rgb(215, 233, 250);
+   width: 100%;
+   height: 100%;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 30px;
+   background-color:rgb(51, 51, 61);
+}
+#portada{
+   grid-area: m5;
+   width: auto;
+   height: auto;
+}
+#mapa{
+    width: 100%;
+    height: 100%;
+    grid-area: m6;
+    align-self: center;
+}
+#presupuesto{
+    display: inline-block;
+    grid-area: m11;
+}
+#presupuesto:hover{
+    background-color: lawngreen;
+    transform: translate(10px , 10px);
+
+}
+ .presupuestoHijo{
+   color:rgb(215, 233, 250);
+   background-color:rgb(220, 20, 60);
+   grid-area: m11; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    margin-top: 10px;
+}   
+.presupuestoHijo:hover{
+   color:rgb(51, 51, 61);
+   background-color: lawngreen;
+   transform: translate(10px , 10px);
+}
+.consulta{
+   color:rgb(215, 233, 250);
+}
+.consulta:hover{
+   color:rgb(25, 25, 27);
+   background-color: lawngreen;
+   transform: translate(10px , 10px);
+}
+#whatsapp{
+   grid-area: m10;
+   margin-top: 10px;
+   height: 100%;
+   transition: all 2s;
+   position: sticky;
+   bottom: 0;
+}
+#whatsapp:hover{
+   transform: scale(1,1.5);
+}
+#mainContacto{
+   background-color: rgb(215, 233, 250);
+   height: auto;
+}
+  @media only screen and (max-width: 600px){
+        
+    #menuNav{
+        background-color:rgb(233, 33, 43);
+        position: sticky;
+        top: 0pt;
+    }
+    #padre{
+        background-color: rgb(51, 51, 61);
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-rows: 45px;
+        grid-template-areas: "a1 a2 a3 a4";
+        column-gap: 1em;
+         }
+   #padre #hijoUno{
+       grid-area: a1;
+    }
+    #padre #hijoDos{
+       grid-area: a2;
+    }
+    #padre #hijoCuatro{
+    grid-area: a3;
+    }
+    #padre #hijoCinco{
+    grid-area: a4;
+    
+    }
+     
+     #main{
+            row-gap: 15px;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 300px 100px 300px 150px 150px;
+            grid-template-areas: "q1" 
+                                 "q2"
+                                 "q3"
+                                 "q4"
+                                 "q5"
+                                 "q6";
+            height: auto;                     
+            }
+        #queHacemos{
+            grid-area: q1;
+            justify-items: center;
+            width: 100%;
+            height: 100%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #portada{
+            grid-area: q2;
+            width: 100%;
+            height: 100%;
+        }
+        #dondeEstamos{
+            grid-area: q3;
+            align-items: center;
+            justify-items: stretch;
+        }
+        #mapa{
+            grid-area: q4;
+            width: 100%;
+            height: 100%;
+        }
+        #presupuesto{
+            grid-area: q5;
+            width: min-content;
+            height: 60%;
+            justify-self: center;
+        }
+        #whatsapp{
+            grid-area: q6;
+            height: 50%;
+            width: 40%;
+            justify-self: center;
+            margin-top: 1em;
+            }
+        *header{
+            height: 100px;
+            border-bottom: none;
+        }
+        .padreTitulo{
+             grid-template-columns: 50% 50%;
+             grid-template-rows: 50px 50px;
+             grid-template-areas: "t1 t2"
+                                  "t1 t3";
+             justify-items: center;
+             align-items: center;
+        }
+        .hijoUno{
+            grid-area: t1;
+            justify-self: center;
+            align-self: center;
+            
+        }
+        .titulo{
+            font-size: 40px;
+            text-align: center;
+            display: inline-block;
+            font-stretch: semi-expanded;
+            overflow: hidden;
+            margin-bottom: 0;
+            font-weight: bolder;
+            text-shadow: 2px 2px 1px #fff ;
+        }
+        .hijoDos{
+            grid-area: t3;
+        }
+        .hijoDos p{
+            font-size: 13px;
+            color:rgb(215, 236, 22);
+            text-align: center;
+            margin-top: 25px;
+        }
+        .flete{
+            grid-area: t2;
+            height: 20px;
+            width: 50px;
+        }
+    #mainProductos{
+        display: grid;
+        grid-template-columns: 95%;
+        grid-template-rows: 200px 20px 200px 20px 200px 20px 200px;
+        grid-template-areas: "pr1"
+                             "pr2"
+                             "pr3"
+                             "pr4"
+                             "pr5"
+                             "pr6"
+                             "pr7";
+         row-gap: 20px;  
+         justify-content: center;  
+         height: 1100px;
+         justify-items: center;
+         align-items: center;                
+    }
+    .ratonaUno{
+        grid-area: pr1;
+        height: 100%;
+        border-radius: 3%;
+    }
+    .ratonaDos{
+        grid-area: pr3;
+        height: 100%;
+        border-radius: 3%;
+    }
+    .lamparaUno{
+        grid-area: pr5;
+        height: 100%;
+        border-radius: 3%;
+    }
+    .lamparaDos{
+        grid-area: pr7;
+        height: 100%;
+        border-radius: 3%;
+    }
+    .rotuloP{
+        font-size: 20px;
+    }
+    }
+
+   .pres{
+         display: inline-block;
+         color: white;
+         margin-left: 20%;
+     }
+     .seguinos{
+         color:rgb(215, 233, 250);
+         display: inline-block;
+         margin: 0em 1em 0em 1em;
+         font-size: 20px;
+     }
+     .botonSeguinos{
+         background-color: rgb(42, 42, 218);
+     }
